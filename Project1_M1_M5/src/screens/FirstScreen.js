@@ -30,4 +30,32 @@ const FirstScreen = () => {
 
 }
 
-export default FirstScreen;
+const ChallengeScreen = () => {
+
+    return (
+        <View style={{
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'center'
+        }}>
+
+            <Text style={{ color: 'green', margin: 16 }}>Let's Learn React Native Framework</Text>
+
+            <Text>My name is Zhafran</Text>
+
+            <Text style={{ margin: 16 }}>
+                Now I'm learning about
+                <Text style={{ color: 'navy' }}> React Native Components </Text>
+                to build the user interface for Android apps
+            </Text>
+
+            <Text style={{ color: 'red', marginBottom: 16 }}>I Love Coding</Text>
+
+            <Button title="Click me" />
+
+        </View>
+    )
+
+}
+
+export default ChallengeScreen;
