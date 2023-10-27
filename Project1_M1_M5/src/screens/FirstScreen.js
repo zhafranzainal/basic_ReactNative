@@ -10,8 +10,10 @@ const FirstScreen = () => {
             justifyContent: 'center'
         }}>
 
-            <Text>
-                Hello World!
+            <Text style={{ margin: 16 }}>
+                Hello
+                <Text style={{ color: 'red' }}> World</Text>
+                !
             </Text>
 
             <Button title="This is button"></Button>
