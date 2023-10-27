@@ -32,6 +32,10 @@ const FirstScreen = () => {
 
 const ChallengeScreen = () => {
 
+    const showAlert = () => {
+        alert('You are awesome!!!')
+    };
+
     return (
         <View style={{
             flex: 1,
@@ -51,7 +55,10 @@ const ChallengeScreen = () => {
 
             <Text style={{ color: 'red', marginBottom: 16 }}>I Love Coding</Text>
 
-            <Button title="Click me" />
+            <Button
+                title="Click me"
+                onPress={showAlert}
+            />
 
         </View>
     )
