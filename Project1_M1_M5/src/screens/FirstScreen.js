@@ -65,4 +65,4 @@ const ChallengeScreen = () => {
 
 }
 
-export default ChallengeScreen;
+export default FirstScreen;
