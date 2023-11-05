@@ -1,12 +1,16 @@
 import React from "react";
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 const SecondScreen = () => {
+
+    const openAlert = () => {
+        alert('You chose Mobile Legends!');
+    }
 
     return (
         <View style={{ flex: 1, backgroundColor: 'lavender', justifyContent: "center", alignItems: "center" }}>
 
-            <View style={{ backgroundColor: 'skyblue', margin: 20, padding: 7, borderWidth: 1, borderColor: 'red', borderStyle: 'dashed', borderRadius: 7 }}>
+            <View style={{ backgroundColor: 'skyblue', marginLeft: 17, marginRight: 17, marginBottom: 5, padding: 7, borderWidth: 1, borderColor: 'red', borderStyle: 'dashed', borderRadius: 7 }}>
                 <Text style={{ fontWeight: 'bold', textAlign: 'center' }}>
                     Mobile Legends
                 </Text>
@@ -17,7 +21,24 @@ const SecondScreen = () => {
                 </Text>
             </View>
 
-            <View style={{ backgroundColor: 'cornflowerblue', marginLeft: 17, marginRight: 17, padding: 7, borderWidth: 1, borderColor: 'red', borderStyle: 'dotted', borderRadius: 7 }}>
+            <TouchableOpacity
+                style={{
+                    backgroundColor: 'white',
+                    margin: 8,
+                    padding: 8,
+                    borderRadius: 50,
+                    borderWidth: 2,
+                }}
+                onPress={() => openAlert()}
+            >
+
+                <Text style={{ color: 'lightcoral' }}>
+                    Mobile Legends Button
+                </Text>
+
+            </TouchableOpacity>
+
+            <View style={{ backgroundColor: 'cornflowerblue', marginLeft: 17, marginRight: 17, marginTop: 5, padding: 7, borderWidth: 1, borderColor: 'red', borderStyle: 'dotted', borderRadius: 7 }}>
                 <Text style={{ fontWeight: 'bold', textAlign: 'center' }}>
                     PUBG
                 </Text>
