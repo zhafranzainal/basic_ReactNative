@@ -3,9 +3,13 @@ import { View, Text, TouchableOpacity } from 'react-native';
 
 const SecondScreen = () => {
 
-    const openAlert = () => {
-        alert('You chose Mobile Legends!');
-    }
+    const openAlert = (game) => {
+        if (game === 'moba') {
+            alert('You chose Mobile Legends!');
+        } else if (game === 'pubg') {
+            alert('You chose PUBG!');
+        }
+    };
 
     return (
         <View style={{ flex: 1, backgroundColor: 'lavender', justifyContent: "center", alignItems: "center" }}>
@@ -29,7 +33,7 @@ const SecondScreen = () => {
                     borderRadius: 50,
                     borderWidth: 2,
                 }}
-                onPress={() => openAlert()}
+                onPress={() => openAlert('moba')}
             >
 
                 <Text style={{ color: 'lightcoral' }}>
@@ -47,6 +51,23 @@ const SecondScreen = () => {
                     game in which players drop onto an island and fight to be the last one left standing..
                 </Text>
             </View>
+
+            <TouchableOpacity
+                style={{
+                    backgroundColor: 'white',
+                    margin: 8,
+                    padding: 8,
+                    borderRadius: 50,
+                    borderWidth: 2,
+                }}
+                onPress={() => openAlert('pubg')}
+            >
+
+                <Text style={{ color: 'lightcoral' }}>
+                    PUBG Button
+                </Text>
+
+            </TouchableOpacity>
 
         </View>
     )
