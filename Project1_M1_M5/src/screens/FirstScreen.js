@@ -28,7 +28,7 @@ const FirstScreen = () => {
         </View>
     )
 
-}
+};
 
 const ChallengeScreen = () => {
 
@@ -63,6 +63,6 @@ const ChallengeScreen = () => {
         </View>
     )
 
-}
+};
 
 export default FirstScreen;
