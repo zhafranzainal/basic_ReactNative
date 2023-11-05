@@ -74,4 +74,53 @@ const SecondScreen = () => {
 
 };
 
-export default SecondScreen;
+const ChallengeScreen = () => {
+
+    return (
+        <View style={{ flex: 1, backgroundColor: 'lavender', justifyContent: 'center', alignItems: 'center' }}>
+
+            <View>
+                <Text style={{ color: 'navy', fontWeight: 'bold', textDecorationLine: 'underline', textTransform: 'uppercase' }}>
+                    iOS
+                </Text>
+            </View>
+
+            <View style={{ backgroundColor: 'peachpuff', margin: 15, padding: 7, borderWidth: 1, borderStyle: 'dashed', borderRadius: 15 }}>
+                <Text style={{ textAlign: 'justify', color: 'black' }}>
+                    <Text style={{ fontWeight: 'bold' }}>iOS </Text>
+                    (formerly iPhone OS) is a mobile operating system created and developed by
+                    <Text style={{ fontWeight: 'bold', fontStyle: 'italic', color: 'deeppink' }}> Apple Inc. </Text>
+                    exclusively for its hardware. It is the operating system that powers many
+                    of the company's mobile devices, including the iPhone and iPod Touch.
+                </Text>
+            </View>
+
+            <View style={{ marginBottom: 15 }}>
+                <Text style={{ color: 'black' }}>
+                    VS.
+                </Text>
+            </View>
+
+            <View>
+                <Text style={{ color: 'green', fontWeight: 'bold', textDecorationLine: 'underline', textTransform: 'uppercase' }}>
+                    Android
+                </Text>
+            </View>
+
+            <View style={{ backgroundColor: '#f3cbcb', margin: 15, padding: 7, borderWidth: 1, borderStyle: 'dashed', borderRadius: 15 }}>
+                <Text style={{ textAlign: 'justify', color: 'black' }}>
+                    <Text style={{ fontWeight: 'bold' }}>Android</Text> is a mobile operating system based on a modified version
+                    of the Linux kernel and other open source software, designed primarily for touchscreen mobile devices such as
+                    smartphones and tablets. Android is developed by a consortium of developers known as the
+                    <Text style={{ fontWeight: 'bold', fontStyle: 'italic', color: 'purple' }}> Open Handset Alliance </Text>
+                    and commercially sponsored by
+                    <Text style={{ fontWeight: 'bold', fontStyle: 'italic', color: 'blue' }}> Google</Text>.
+                </Text>
+            </View>
+
+        </View>
+    )
+
+};
+
+export default ChallengeScreen;
