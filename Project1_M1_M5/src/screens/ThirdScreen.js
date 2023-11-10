@@ -107,7 +107,12 @@ const ChallengeScreen = () => {
         <View>
 
             <View style={{ alignItems: 'center', margin: 8 }}>
-                <Text>Pokemon's Profile</Text>
+                <Text style={{
+                    textDecorationLine: 'underline',
+                    color: 'navy',
+                    fontWeight: 'bold',
+                    fontSize: 20
+                }}>Pokemon's Profile</Text>
             </View>
 
             <ScrollView>
