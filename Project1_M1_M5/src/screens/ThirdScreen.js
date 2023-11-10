@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 
 const ThirdScreen = () => {
     return (
@@ -27,4 +27,23 @@ const ThirdScreen = () => {
     )
 };
 
-export default ThirdScreen;
+const AddImage = () => {
+    return (
+        <View>
+            <View style={{ margin: 8, padding: 8 }}>
+                <Image style={{
+                    width: 150,
+                    height: 150,
+                    borderRadius: 100,
+                    borderWidth: 1,
+                    borderColor: 'green',
+                    backgroundColor: 'aliceblue'
+                }}
+                    source={require('../../assets/images/pikachu.png')}
+                />
+            </View>
+        </View>
+    )
+};
+
+export default AddImage;
