@@ -70,6 +70,32 @@ const AddImage = () => {
                 />
             </View>
 
+            <View style={{ margin: 8, padding: 8 }}>
+                <Image style={{
+                    width: 150,
+                    height: 150,
+                    borderRadius: 100,
+                    borderWidth: 1,
+                    borderColor: 'green',
+                    backgroundColor: 'aliceblue'
+                }}
+                    source={{ uri: 'https://i.ibb.co/bLz74hj/psyduck.png' }}
+                />
+            </View>
+
+            <View style={{ margin: 8, padding: 8 }}>
+                <Image style={{
+                    width: 150,
+                    height: 150,
+                    borderRadius: 100,
+                    borderWidth: 1,
+                    borderColor: 'green',
+                    backgroundColor: 'aliceblue'
+                }}
+                    source={{ uri: 'https://i.ibb.co/GQBLC7r/bulbasaur.png' }}
+                />
+            </View>
+
         </View>
     )
 };
