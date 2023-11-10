@@ -102,4 +102,49 @@ const AddImage = () => {
     )
 };
 
-export default AddImage;
+const ChallengeScreen = () => {
+    return (
+        <View>
+
+            <View style={{ alignItems: 'center', margin: 8 }}>
+                <Text>Pokemon's Profile</Text>
+            </View>
+
+            <ScrollView>
+
+                <View style={{
+                    margin: 8,
+                    padding: 8,
+                    flexDirection: 'row',
+                }}>
+
+                    <Image style={{
+                        width: 150,
+                        height: 150,
+                    }}
+                        source={require('../../assets/images/pikachu.png')}
+                    />
+
+                    <View style={{
+                        marginLeft: 20,
+                        justifyContent: 'center',
+                    }}>
+                        <Text>
+                            Name: Pikachu
+                            {`\n`}
+                            Category: Mouse
+                            {`\n`}
+                            Abilities: Static
+                            {`\n`}
+                            Weaknesses: Ground
+                        </Text>
+                    </View>
+
+                </View>
+
+            </ScrollView>
+
+        </View>
+    );
+};
+export default ChallengeScreen;
