@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 
 const ThirdScreen = () => {
     return (
-        <View style={{ flex: 1, backgroundColor: 'mistyrose' }}>
+        <View style={{ flex: 1, flexDirection: 'row', backgroundColor: 'mistyrose' }}>
 
             <View style={{ backgroundColor: 'red', flex: 1 }}>
                 <Text style={{ color: 'white' }}>
