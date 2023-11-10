@@ -29,8 +29,8 @@ const ThirdScreen = () => {
 
 const AddImage = () => {
     return (
-        <ScrollView>
-            <View style={{ alignItems: 'center' }}>
+        <View style={{ flexDirection: 'row' }}>
+            <ScrollView horizontal={true}>
 
                 <View style={{ margin: 8, padding: 8 }}>
                     <Image style={{
@@ -97,8 +97,8 @@ const AddImage = () => {
                     />
                 </View>
 
-            </View>
-        </ScrollView>
+            </ScrollView>
+        </View>
     )
 };
 
