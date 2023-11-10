@@ -3,11 +3,27 @@ import { View, Text } from 'react-native';
 
 const ThirdScreen = () => {
     return (
-        <View style={{ backgroundColor: 'red', flex: 1 }}>
-            <Text style={{ color: 'white' }}>
-                Pikachu
-            </Text>
-        </View>
+        <View style={{ flex: 1, backgroundColor: 'mistyrose' }}>
+
+            <View style={{ backgroundColor: 'red', flex: 1 }}>
+                <Text style={{ color: 'white' }}>
+                    Pikachu
+                </Text>
+            </View >
+
+            <View style={{ backgroundColor: 'orange', flex: 2 }}>
+                <Text>
+                    Flareon
+                </Text>
+            </View>
+
+            <View style={{ backgroundColor: 'yellow', flex: 3 }}>
+                <Text>
+                    Rapidash
+                </Text>
+            </View>
+
+        </View >
     )
 };
 
