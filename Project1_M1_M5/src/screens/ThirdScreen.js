@@ -29,7 +29,7 @@ const ThirdScreen = () => {
 
 const AddImage = () => {
     return (
-        <View>
+        <View style={{ alignItems: 'center' }}>
             <View style={{ margin: 8, padding: 8 }}>
                 <Image style={{
                     width: 150,
