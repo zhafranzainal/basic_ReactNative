@@ -127,6 +127,10 @@ const ChallengeScreen = () => {
                     <Image style={{
                         width: 150,
                         height: 150,
+                        borderRadius: 20,
+                        borderWidth: 1,
+                        borderColor: 'green',
+                        backgroundColor: 'aliceblue'
                     }}
                         source={require('../../assets/images/pikachu.png')}
                     />
