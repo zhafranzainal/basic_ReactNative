@@ -111,7 +111,8 @@ const ChallengeScreen = () => {
                     textDecorationLine: 'underline',
                     color: 'navy',
                     fontWeight: 'bold',
-                    fontSize: 20
+                    fontSize: 20,
+                    fontFamily: 'serif'
                 }}>Pokemon's Profile</Text>
             </View>
 
