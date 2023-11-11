@@ -116,184 +116,186 @@ const ChallengeScreen = () => {
                 }}>Pokemon's Profile</Text>
             </View>
 
-            <ScrollView>
+            <ScrollView horizontal={true}>
+                <ScrollView>
 
-                {/* Pikachu */}
-                <View style={{
-                    margin: 8,
-                    padding: 8,
-                    flexDirection: 'row',
-                }}>
-
-                    <Image style={{
-                        width: 150,
-                        height: 150,
-                        borderRadius: 20,
-                        borderWidth: 1,
-                        borderColor: 'green',
-                        backgroundColor: 'aliceblue'
-                    }}
-                        source={require('../../assets/images/pikachu.png')}
-                    />
-
+                    {/* Pikachu */}
                     <View style={{
-                        marginLeft: 20,
-                        justifyContent: 'center',
+                        margin: 8,
+                        padding: 8,
+                        flexDirection: 'row',
                     }}>
-                        <Text>
-                            Name: Pikachu
-                            {`\n`}
-                            Category: Mouse
-                            {`\n`}
-                            Abilities: Static
-                            {`\n`}
-                            Weaknesses: Ground
-                        </Text>
+
+                        <Image style={{
+                            width: 150,
+                            height: 150,
+                            borderRadius: 20,
+                            borderWidth: 1,
+                            borderColor: 'green',
+                            backgroundColor: 'aliceblue'
+                        }}
+                            source={require('../../assets/images/pikachu.png')}
+                        />
+
+                        <View style={{
+                            marginLeft: 20,
+                            justifyContent: 'center',
+                        }}>
+                            <Text>
+                                Name: Pikachu
+                                {`\n`}
+                                Category: Mouse
+                                {`\n`}
+                                Abilities: Static
+                                {`\n`}
+                                Weaknesses: Ground
+                            </Text>
+                        </View>
+
                     </View>
 
-                </View>
-
-                {/* Flareon */}
-                <View style={{
-                    margin: 8,
-                    padding: 8,
-                    flexDirection: 'row',
-                }}>
-
-                    <Image style={{
-                        width: 150,
-                        height: 150,
-                        borderRadius: 20,
-                        borderWidth: 1,
-                        borderColor: 'green',
-                        backgroundColor: 'aliceblue'
-                    }}
-                        source={require('../../assets/images/flareon.png')}
-                    />
-
+                    {/* Flareon */}
                     <View style={{
-                        marginLeft: 20,
-                        justifyContent: 'center',
+                        margin: 8,
+                        padding: 8,
+                        flexDirection: 'row',
                     }}>
-                        <Text>
-                            Name: Flareon
-                            {`\n`}
-                            Category: Flame
-                            {`\n`}
-                            Abilities: Flash Fire
-                            {`\n`}
-                            Weaknesses: Water, Ground, Rock
-                        </Text>
+
+                        <Image style={{
+                            width: 150,
+                            height: 150,
+                            borderRadius: 20,
+                            borderWidth: 1,
+                            borderColor: 'green',
+                            backgroundColor: 'aliceblue'
+                        }}
+                            source={require('../../assets/images/flareon.png')}
+                        />
+
+                        <View style={{
+                            marginLeft: 20,
+                            justifyContent: 'center',
+                        }}>
+                            <Text>
+                                Name: Flareon
+                                {`\n`}
+                                Category: Flame
+                                {`\n`}
+                                Abilities: Flash Fire
+                                {`\n`}
+                                Weaknesses: Water, Ground, Rock
+                            </Text>
+                        </View>
+
                     </View>
 
-                </View>
-
-                {/* Rapidash */}
-                <View style={{
-                    margin: 8,
-                    padding: 8,
-                    flexDirection: 'row',
-                }}>
-
-                    <Image style={{
-                        width: 150,
-                        height: 150,
-                        borderRadius: 20,
-                        borderWidth: 1,
-                        borderColor: 'green',
-                        backgroundColor: 'aliceblue'
-                    }}
-                        source={require('../../assets/images/rapidash.png')}
-                    />
-
+                    {/* Rapidash */}
                     <View style={{
-                        marginLeft: 20,
-                        justifyContent: 'center',
+                        margin: 8,
+                        padding: 8,
+                        flexDirection: 'row',
                     }}>
-                        <Text>
-                            Name: Rapidash
-                            {`\n`}
-                            Category: Fire Horse
-                            {`\n`}
-                            Abilities: Run Away, Flash Fire
-                            {`\n`}
-                            Weaknesses: Water, Ground, Rock
-                        </Text>
+
+                        <Image style={{
+                            width: 150,
+                            height: 150,
+                            borderRadius: 20,
+                            borderWidth: 1,
+                            borderColor: 'green',
+                            backgroundColor: 'aliceblue'
+                        }}
+                            source={require('../../assets/images/rapidash.png')}
+                        />
+
+                        <View style={{
+                            marginLeft: 20,
+                            justifyContent: 'center',
+                        }}>
+                            <Text>
+                                Name: Rapidash
+                                {`\n`}
+                                Category: Fire Horse
+                                {`\n`}
+                                Abilities: Run Away, Flash Fire
+                                {`\n`}
+                                Weaknesses: Water, Ground, Rock
+                            </Text>
+                        </View>
+
                     </View>
 
-                </View>
-
-                {/* Psyduck */}
-                <View style={{
-                    margin: 8,
-                    padding: 8,
-                    flexDirection: 'row',
-                }}>
-
-                    <Image style={{
-                        width: 150,
-                        height: 150,
-                        borderRadius: 20,
-                        borderWidth: 1,
-                        borderColor: 'green',
-                        backgroundColor: 'aliceblue'
-                    }}
-                        source={{ uri: 'https://i.ibb.co/bLz74hj/psyduck.png' }}
-                    />
-
+                    {/* Psyduck */}
                     <View style={{
-                        marginLeft: 20,
-                        justifyContent: 'center',
+                        margin: 8,
+                        padding: 8,
+                        flexDirection: 'row',
                     }}>
-                        <Text>
-                            Name: Psyduck
-                            {`\n`}
-                            Category: Duck
-                            {`\n`}
-                            Abilities: Dump, Cloud Nine
-                            {`\n`}
-                            Weaknesses: Grass, Electric
-                        </Text>
+
+                        <Image style={{
+                            width: 150,
+                            height: 150,
+                            borderRadius: 20,
+                            borderWidth: 1,
+                            borderColor: 'green',
+                            backgroundColor: 'aliceblue'
+                        }}
+                            source={{ uri: 'https://i.ibb.co/bLz74hj/psyduck.png' }}
+                        />
+
+                        <View style={{
+                            marginLeft: 20,
+                            justifyContent: 'center',
+                        }}>
+                            <Text>
+                                Name: Psyduck
+                                {`\n`}
+                                Category: Duck
+                                {`\n`}
+                                Abilities: Dump, Cloud Nine
+                                {`\n`}
+                                Weaknesses: Grass, Electric
+                            </Text>
+                        </View>
+
                     </View>
 
-                </View>
-
-                {/* Bulbasaur */}
-                <View style={{
-                    margin: 8,
-                    marginBottom: 70,
-                    padding: 8,
-                    flexDirection: 'row',
-                }}>
-
-                    <Image style={{
-                        width: 150,
-                        height: 150,
-                        borderRadius: 20,
-                        borderWidth: 1,
-                        borderColor: 'green',
-                        backgroundColor: 'aliceblue'
-                    }}
-                        source={{ uri: 'https://i.ibb.co/GQBLC7r/bulbasaur.png' }}
-                    />
-
+                    {/* Bulbasaur */}
                     <View style={{
-                        marginLeft: 20,
-                        justifyContent: 'center',
+                        margin: 8,
+                        marginBottom: 70,
+                        padding: 8,
+                        flexDirection: 'row',
                     }}>
-                        <Text>
-                            Name: Bulbasaur
-                            {`\n`}
-                            Category: Seed
-                            {`\n`}
-                            Abilities: Overgrow
-                            {`\n`}
-                            Weaknesses: Fire, Psychic, Flying, Ice
-                        </Text>
+
+                        <Image style={{
+                            width: 150,
+                            height: 150,
+                            borderRadius: 20,
+                            borderWidth: 1,
+                            borderColor: 'green',
+                            backgroundColor: 'aliceblue'
+                        }}
+                            source={{ uri: 'https://i.ibb.co/GQBLC7r/bulbasaur.png' }}
+                        />
+
+                        <View style={{
+                            marginLeft: 20,
+                            justifyContent: 'center',
+                        }}>
+                            <Text>
+                                Name: Bulbasaur
+                                {`\n`}
+                                Category: Seed
+                                {`\n`}
+                                Abilities: Overgrow
+                                {`\n`}
+                                Weaknesses: Fire, Psychic, Flying, Ice
+                            </Text>
+                        </View>
+
                     </View>
 
-                </View>
-
+                </ScrollView>
             </ScrollView>
 
         </View>
