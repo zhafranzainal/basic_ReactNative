@@ -261,6 +261,7 @@ const ChallengeScreen = () => {
                 {/* Bulbasaur */}
                 <View style={{
                     margin: 8,
+                    marginBottom: 70,
                     padding: 8,
                     flexDirection: 'row',
                 }}>
