@@ -299,4 +299,5 @@ const ChallengeScreen = () => {
         </View>
     );
 };
+
 export default ChallengeScreen;
