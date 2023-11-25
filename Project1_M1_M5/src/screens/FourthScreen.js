@@ -1,5 +1,6 @@
 import React from "react";
 import { View, ImageBackground, Text, TextInput } from 'react-native';
+import { InputComponent } from "../components/InputComponent";
 
 const FourthScreen = () => {
     return (
@@ -74,6 +75,14 @@ const FourthScreen = () => {
                 placeholder='Phone number'
                 keyboardType='numeric'
 
+            />
+
+            <InputComponent
+                title='Location'
+                height={40}
+                placeholder='Location'
+                multiline={true}
+                keyboardType='default'
             />
 
         </View >
