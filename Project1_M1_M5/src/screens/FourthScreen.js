@@ -67,4 +67,70 @@ const FourthScreen = () => {
     )
 };
 
-export default FourthScreen;
+const ChallengeScreen = () => {
+    return (
+        <View style={{ flex: 1 }}>
+
+            <ImageBackground
+
+                style={{
+                    flex: 1,
+                    justifyContent: 'center'
+                }}
+
+                imageStyle={{ opacity: 0.2 }}
+
+                source={{
+                    uri: 'https://i.pinimg.com/736x/e4/28/c5/e428c5f6e045bcf567fa4267f7985076.jpg'
+                }}
+
+            >
+
+                <View style={{ alignItems: 'flex-end' }}>
+                    <Text
+                        style={{
+                            fontWeight: 'bold',
+                            fontSize: 20,
+                            backgroundColor: 'beige',
+                            padding: 10,
+                            margin: 10
+                        }}
+                    >
+                        Colosseum
+                    </Text>
+                </View >
+
+                <View style={{ margin: 8, padding: 8 }}>
+
+                    <InputComponent
+                        title='Description'
+                        height={140}
+                        placeholder='About the place'
+                        multiline={true}
+                        keyboardType='default'
+                    />
+
+                    <InputComponent
+                        title='Phone Number'
+                        height={40}
+                        placeholder='Phone number'
+                        keyboardType='numeric'
+                    />
+
+                    <InputComponent
+                        title='Location'
+                        height={40}
+                        placeholder='Location'
+                        multiline={true}
+                        keyboardType='default'
+                    />
+
+                </View>
+
+            </ImageBackground >
+
+        </View >
+    )
+};
+
+export default ChallengeScreen;
