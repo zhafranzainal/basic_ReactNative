@@ -9,7 +9,7 @@ export const InputComponent = (props) => {
         <View>
 
             <Text style={{ marginTop: 12, marginBottom: 12 }}>
-                {{ title }}
+                {title}
             </Text>
 
             <TextInput
