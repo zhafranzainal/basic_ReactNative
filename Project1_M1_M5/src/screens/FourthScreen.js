@@ -48,13 +48,31 @@ const FourthScreen = () => {
                 style={{
                     padding: 10,
                     borderWidth: 1,
-                    height: 40,
+                    height: 140,
                     fontSize: 16
                 }}
 
                 placeholder='About the place'
                 multiline={true}
                 keyboardType='default'
+
+            />
+
+            <Text style={{ marginTop: 12, marginBottom: 12 }}>
+                Phone Number
+            </Text>
+
+            <TextInput
+
+                style={{
+                    padding: 10,
+                    borderWidth: 1,
+                    height: 40,
+                    fontSize: 16
+                }}
+
+                placeholder='Phone number'
+                keyboardType='numeric'
 
             />
 
