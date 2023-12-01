@@ -57,6 +57,33 @@ export const Feed = (props) => {
 
             />
 
+            <View style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between'
+            }}>
+
+                <View style={{ flexDirection: 'row' }}>
+
+                    <View style={{ margin: 8 }}>
+                        <Icon name='heart-o' type='font-awesome' size={26} />
+                    </View>
+
+                    <View style={{ margin: 8 }}>
+                        <Icon name='comment-o' type='font-awesome' size={26} />
+                    </View>
+
+                    <View style={{ margin: 8 }}>
+                        <Icon name='paper-plane-outline' type='ionicon' size={26} />
+                    </View>
+
+                </View>
+
+                <View style={{ margin: 8 }}>
+                    <Icon name='bookmark-o' type='font-awesome' size={26} />
+                </View>
+
+            </View >
+
         </View >
     )
 
