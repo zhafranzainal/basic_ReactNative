@@ -51,6 +51,30 @@ const InstagramHomeScreen = () => {
                         post={{ uri: 'https://i.ibb.co/bLz74hj/psyduck.png' }}
                     />
 
+                    <Feed
+                        profile={require('../../assets/images/profilePicture2.png')}
+                        username='brad'
+                        post={{ uri: 'https://i.ibb.co/GQBLC7r/bulbasaur.png' }}
+                    />
+
+                    <Feed
+                        profile={require('../../assets/images/profilePicture3.png')}
+                        username='cindy'
+                        post={{ uri: 'https://wallpaperaccess.com/full/496881.jpg' }}
+                    />
+
+                    <Feed
+                        profile={require('../../assets/images/profilePicture4.png')}
+                        username='jeffchang'
+                        post={{ uri: 'https://images5.alphacoders.com/316/316297.jpg' }}
+                    />
+
+                    <Feed
+                        profile={require('../../assets/images/profilePicture5.png')}
+                        username='syafiyyah'
+                        post={{ uri: 'https://wallpaperaccess.com/full/1403923.jpg' }}
+                    />
+
                 </ScrollView>
             </View>
 
