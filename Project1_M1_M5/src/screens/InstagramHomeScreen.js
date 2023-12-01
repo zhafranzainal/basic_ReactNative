@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, ScrollView } from 'react-native';
 import { Icon } from 'react-native-elements';
-import { Feed } from '../components/InstagramComponent';
+import { Feed, Story } from '../components/InstagramComponent';
 
 const InstagramHomeScreen = () => {
     return (
@@ -44,6 +44,37 @@ const InstagramHomeScreen = () => {
 
             <View style={{ flex: 1 }}>
                 <ScrollView>
+
+                    <View style={{ flexDirection: 'row', margin: 8 }}>
+                        <ScrollView horizontal>
+
+                            <Story
+                                profile={require('../../assets/images/profilePicture1.png')}
+                                username='catherine'
+                            />
+
+                            <Story
+                                profile={require('../../assets/images/profilePicture2.png')}
+                                username='brad'
+                            />
+
+                            <Story
+                                profile={require('../../assets/images/profilePicture3.png')}
+                                username='cindy'
+                            />
+
+                            <Story
+                                profile={require('../../assets/images/profilePicture4.png')}
+                                username='jeffchang'
+                            />
+
+                            <Story
+                                profile={require('../../assets/images/profilePicture5.png')}
+                                username='syafiyyah'
+                            />
+
+                        </ScrollView>
+                    </View>
 
                     <Feed
                         profile={require('../../assets/images/profilePicture1.png')}
