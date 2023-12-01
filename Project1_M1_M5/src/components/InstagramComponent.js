@@ -46,6 +46,17 @@ export const Feed = (props) => {
 
             </View >
 
+            <Image
+
+                style={{
+                    width: '100%',
+                    height: 300
+                }}
+
+                source={post}
+
+            />
+
         </View >
     )
 

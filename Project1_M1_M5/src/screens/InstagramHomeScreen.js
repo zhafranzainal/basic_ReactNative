@@ -47,6 +47,7 @@ const InstagramHomeScreen = () => {
                     <Feed
                         profile={require('../../assets/images/profilePicture1.png')}
                         username='catherine'
+                        post={{ uri: 'https://i.ibb.co/bLz74hj/psyduck.png' }}
                     />
                 </ScrollView>
             </View>
