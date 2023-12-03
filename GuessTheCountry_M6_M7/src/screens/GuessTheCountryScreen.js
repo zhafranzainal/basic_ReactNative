@@ -14,12 +14,18 @@ const GuessTheCountryScreen = () => {
     };
 
     const checkAnswer = () => {
+
         if (answer.toLowerCase() === countryList[index]) {
             setResult('Correct!');
         } else {
             setResult('Wrong!');
         }
-        randomIndex();
+
+        setTimeout(() => {
+            setResult('');
+            randomIndex();
+        }, 1500);
+
     };
 
     useEffect(() => {
