@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 
 const HomeScreen = () => {
@@ -12,6 +12,11 @@ const HomeScreen = () => {
     const increaseNumber = () => {
         setNumber(number + 1);
     };
+
+    useEffect(() => {
+        setNumber(10);
+        alert('You can increase or decrease the number!');
+    }, []);
 
     return (
         <View style={{
