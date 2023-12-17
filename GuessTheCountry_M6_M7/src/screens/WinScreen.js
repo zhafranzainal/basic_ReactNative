@@ -1,7 +1,9 @@
 import React from 'react';
 import { View, ImageBackground, Image, TouchableOpacity, Text } from 'react-native';
 
-const WinScreen = () => {
+const WinScreen = (props) => {
+
+    const { navigation } = props;
 
     return (
         <View style={{ flex: 1 }}>
@@ -34,7 +36,10 @@ const WinScreen = () => {
                     }}
                 >
 
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate('Home')}
+                    >
+
                         <Text style={{
                             textTransform: 'uppercase',
                             fontSize: 24,
@@ -43,6 +48,7 @@ const WinScreen = () => {
                         }}>
                             Play Again
                         </Text>
+
                     </TouchableOpacity>
 
                 </View >
