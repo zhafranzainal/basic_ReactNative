@@ -40,7 +40,14 @@ const GuessTheCountryScreen = (props) => {
     }, [score]);
 
     useEffect(() => {
-        randomIndex();
+
+        const homePage = navigation.addListener('focus', () => {
+            randomIndex();
+            setScore(0);
+        })
+
+        return homePage;
+
     }, []);
 
     return (
