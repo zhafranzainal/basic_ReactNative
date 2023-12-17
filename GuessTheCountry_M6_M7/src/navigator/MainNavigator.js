@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import GuessTheCountryScreen from '../screens/GuessTheCountryScreen';
 import WinScreen from '../screens/WinScreen';
+import GameOverScreen from '../screens/GameOverScreen';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,12 @@ const MainNavigator = () => {
                 <Stack.Screen
                     name='Win'
                     component={WinScreen}
+                    options={{ headerShown: false }}
+                />
+
+                <Stack.Screen
+                    name='GameOver'
+                    component={GameOverScreen}
                     options={{ headerShown: false }}
                 />
 
