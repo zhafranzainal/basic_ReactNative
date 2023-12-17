@@ -16,7 +16,7 @@ export const countryList = [
     'greece',
     'china',
     'peru',
-    'unites arab emirates',
+    'united arab emirates',
     'vietnam',
     'cambodia'
 ]
