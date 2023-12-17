@@ -24,6 +24,7 @@ const GuessTheCountryScreen = (props) => {
             setScore(score + 10);
         } else {
             setResult('Wrong!');
+            setLife(life - 1);
         }
 
         setTimeout(() => {
@@ -35,21 +36,28 @@ const GuessTheCountryScreen = (props) => {
     };
 
     useEffect(() => {
+
+        const homePage = navigation.addListener('focus', () => {
+            randomIndex();
+            setScore(0);
+            setLife(3);
+        })
+
+        return homePage;
+
+    }, []);
+
+    useEffect(() => {
         if (score === 50) {
             navigation.navigate('Win');
         }
     }, [score]);
 
     useEffect(() => {
-
-        const homePage = navigation.addListener('focus', () => {
-            randomIndex();
-            setScore(0);
-        })
-
-        return homePage;
-
-    }, []);
+        if (life === 0) {
+            navigation.navigate('GameOver');
+        }
+    }, [life]);
 
     return (
         <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
