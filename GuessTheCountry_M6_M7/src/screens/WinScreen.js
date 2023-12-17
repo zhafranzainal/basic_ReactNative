@@ -51,10 +51,10 @@ const WinScreen = (props) => {
 
                     </TouchableOpacity>
 
-                </View >
+                </View>
 
             </ImageBackground >
-        </View >
+        </View>
     )
 
 };
