@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, ImageBackground, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
+import { PlanetComponent } from '../components/PlanetComponent';
 
 const SolarSystemScreen = () => {
     return (
@@ -20,46 +21,57 @@ const SolarSystemScreen = () => {
                 </Text>
             </View>
 
-            <View style={{
-                flexDirection: 'row',
-                backgroundColor: 'wheat',
-                margin: 16,
-                padding: 16,
-                borderRadius: 20,
-                borderColor: 'green',
-                borderWidth: 1
-            }}>
+            <ScrollView>
 
-                <Image
-
-                    style={{
-                        width: 100,
-                        height: 100,
-                    }}
-
-                    source={require('../../assets/images/mercury.png')}
-
+                <PlanetComponent
+                    planetImage={require('../../assets/images/mercury.png')}
+                    planetName='mercury'
+                    planetDescription='Mercury is the fastest planet, zipping around the sun every 88 earth days'
                 />
 
-                <View style={{
-                    flex: 1,
-                    marginLeft: 8,
-                    marginRight: 8,
-                    justifyContent: 'center'
-                }}>
+                <PlanetComponent
+                    planetImage={require('../../assets/images/venus.png')}
+                    planetName='venus'
+                    planetDescription='Venus spins slowly in the opposite direction from most planets'
+                />
 
-                    <Text style={{
-                        fontSize: 20,
-                        fontWeight: 'bold'
-                    }}>
-                        Mercury
-                    </Text>
+                <PlanetComponent
+                    planetImage={require('../../assets/images/earth.png')}
+                    planetName='earth'
+                    planetDescription="Earth is the only place we know of so far that's inhabited by living things"
+                />
 
-                    <Text>Mercury is the fastest</Text>
+                <PlanetComponent
+                    planetImage={require('../../assets/images/mars.png')}
+                    planetName='mars'
+                    planetDescription='Mars is a dusty, cold, desert world with a very thin atmosphere'
+                />
 
-                </View>
+                <PlanetComponent
+                    planetImage={require('../../assets/images/jupiter.png')}
+                    planetName='jupiter'
+                    planetDescription='Jupiter is more than twice as massive than the other planets of our solar system combined'
+                />
 
-            </View>
+                <PlanetComponent
+                    planetImage={require('../../assets/images/saturn.png')}
+                    planetName='saturn'
+                    planetDescription='Adorned with a dazzling, complex system of icy rings, Saturn is unique in our solar system'
+                />
+
+                <PlanetComponent
+                    planetImage={require('../../assets/images/uranus.png')}
+                    planetName='uranus'
+                    planetDescription='Uranus rotates at a nearly 90-degree angle from the plane of its orbit'
+                />
+
+                <PlanetComponent
+                    planetImage={require('../../assets/images/neptune.png')}
+                    planetName='neptune'
+                    planetDescription='Neptune is dark, cold, and whipped by supersonic winds'
+                />
+
+            </ScrollView>
 
         </View>
     )
