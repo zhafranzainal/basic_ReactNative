@@ -28,6 +28,8 @@ const HomeScreen = () => {
                                     <Text>{item.year}</Text>
                                 </View>
 
+                                <Text>{item.rating}</Text>
+
                             </View>
 
                         </View>
