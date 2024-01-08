@@ -6,6 +6,7 @@ import { ShowMovie } from '../components/MovieComponent';
 const HomeScreen = () => {
 
     const [recommended, setRecommended] = useState([]);
+    const [mostViewed, setMostViewed] = useState([]);
 
     const compareRating = (movieA, movieB) => {
 
@@ -22,9 +23,29 @@ const HomeScreen = () => {
 
     };
 
+    const compareViewers = (movieA, movieB) => {
+
+        const viewersA = movieA.viewers;
+        const viewersB = movieB.viewers;
+
+        if (viewersA > viewersB) {
+            return -1;
+        } else if (viewersA < viewersB) {
+            return 1;
+        } else {
+            return 0;
+        }
+
+    };
+
     useEffect(() => {
+
         const sortedRecommended = [...movieData].sort(compareRating);
         setRecommended(sortedRecommended);
+
+        const sortedMostViewed = [...movieData].sort(compareViewers);
+        setMostViewed(sortedMostViewed);
+
     }, []);
 
     return (
@@ -63,7 +84,7 @@ const HomeScreen = () => {
                     <View>
                         <FlatList
                             horizontal
-                            data={movieData}
+                            data={mostViewed}
                             keyExtractor={(item) => item.id}
                             renderItem={({ item }) => {
                                 return (
