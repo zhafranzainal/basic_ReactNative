@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, FlatList, Image, Text } from 'react-native';
 import { movieData } from '../../data/MovieData';
+import { ShowMovie } from '../components/MovieComponent';
 
 const HomeScreen = () => {
 
@@ -35,6 +36,25 @@ const HomeScreen = () => {
                         </View>
                     )
                 }}
+
+                ListHeaderComponent={
+                    <View>
+                        <FlatList
+                            horizontal
+                            data={movieData}
+                            keyExtractor={(item) => item.id}
+                            renderItem={({ item }) => {
+                                return (
+                                    <ShowMovie
+                                        image={{ uri: item.imageLink }}
+                                        title={item.title}
+                                        viewers={item.viewers}
+                                    />
+                                )
+                            }}
+                        />
+                    </View>
+                }
             />
 
         </View>
