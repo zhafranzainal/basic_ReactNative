@@ -14,11 +14,15 @@ const HomeScreen = () => {
                 renderItem={({ item }) => {
                     return (
                         <View style={styles.dataContainer}>
+
                             <Image
                                 style={styles.movieImage}
                                 source={{ uri: item.imageLink }}
                             />
+
                             <Text style={styles.title}>{item.title}</Text>
+                            <Text>{item.year}</Text>
+
                         </View>
                     )
                 }}
