@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, FlatList, Image } from 'react-native';
+import { View, StyleSheet, FlatList, Image, Text } from 'react-native';
 import { movieData } from '../../data/MovieData';
 
 const HomeScreen = () => {
@@ -18,6 +18,7 @@ const HomeScreen = () => {
                                 style={styles.movieImage}
                                 source={{ uri: item.imageLink }}
                             />
+                            <Text style={styles.title}>{item.title}</Text>
                         </View>
                     )
                 }}
@@ -42,6 +43,10 @@ const styles = StyleSheet.create({
         width: 130,
         height: 200,
         borderRadius: 10
+    },
+    title: {
+        fontSize: 18,
+        fontWeight: 'bold'
     },
 });
 
