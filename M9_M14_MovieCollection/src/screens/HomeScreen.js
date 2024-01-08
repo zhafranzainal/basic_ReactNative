@@ -37,7 +37,11 @@ const styles = StyleSheet.create({
         padding: 8
     },
     dataContainer: {
-        margin: 8
+        margin: 8,
+        borderWidth: 2,
+        borderColor: '#96ceb4',
+        borderRadius: 10,
+        padding: 16
     },
     movieImage: {
         width: 130,
