@@ -1,6 +1,6 @@
 import React from 'react';
 import { userData } from '../../data/TryCodeData';
-import { View, FlatList, Text } from 'react-native';
+import { View, FlatList, Text, Image } from 'react-native';
 
 const TryCodeScreen = () => {
 
@@ -18,7 +18,17 @@ const TryCodeScreen = () => {
                             backgroundColor: 'lavender',
                             borderWidth: 1
                         }}>
+
+                            <Image
+                                source={{ uri: item.imageLink }}
+                                style={{
+                                    width: 100,
+                                    height: 100
+                                }}
+                            />
+
                             <Text>{item.name}</Text>
+
                         </View>
                     )
                 }}
