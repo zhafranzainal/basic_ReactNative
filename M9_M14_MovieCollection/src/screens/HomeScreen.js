@@ -45,7 +45,8 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: '#96ceb4',
         borderRadius: 10,
-        padding: 16
+        padding: 16,
+        flexDirection: 'row'
     },
     movieImage: {
         width: 130,
