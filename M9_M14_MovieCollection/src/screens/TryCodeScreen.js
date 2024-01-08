@@ -28,6 +28,8 @@ const TryCodeScreen = () => {
                             />
 
                             <Text>{item.name}</Text>
+                            <Text>{item.gender}</Text>
+                            <Text>{item.age}</Text>
 
                         </View>
                     )
