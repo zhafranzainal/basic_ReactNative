@@ -1,15 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, StyleSheet, FlatList, Image, Text } from 'react-native';
 import { movieData } from '../../data/MovieData';
 import { ShowMovie } from '../components/MovieComponent';
 
 const HomeScreen = () => {
 
+    const [recommended, setRecommended] = useState([]);
+
+    const compareRating = (movieA, movieB) => {
+
+        const ratingA = movieA.rating;
+        const ratingB = movieB.rating;
+
+        if (ratingA > ratingB) {
+            return -1;
+        } else if (ratingA < ratingB) {
+            return 1;
+        } else {
+            return 0;
+        }
+
+    };
+
+    useEffect(() => {
+        const sortedRecommended = [...movieData].sort(compareRating);
+        setRecommended(sortedRecommended);
+    }, []);
+
     return (
         <View style={styles.mainContainer}>
 
             <FlatList
-                data={movieData}
+                data={recommended}
                 keyExtractor={(item) => item.id}
                 contentContainerStyle={styles.flatListContainer}
                 renderItem={({ item }) => {
