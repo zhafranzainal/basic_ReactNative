@@ -42,6 +42,17 @@ const TryCodeScreen = () => {
                             <Text>{item.gender}</Text>
                             <Text>{item.age}</Text>
 
+                            {
+                                item.age < 13 ?
+                                    <Text>Child</Text>
+                                    :
+                                    item.age < 18 ?
+                                        <Text>Teen</Text>
+                                        :
+                                        <Text>Adult</Text>
+                            }
+
+
                         </View>
                     )
                 }}
