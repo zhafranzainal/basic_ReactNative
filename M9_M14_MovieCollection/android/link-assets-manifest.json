@@ -1,0 +1,25 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/images/five-stars.png",
+      "sha1": "3fdd9855ff27c78c23c2601a2f9f7a0375a5a399"
+    },
+    {
+      "path": "assets/images/four-stars.png",
+      "sha1": "df0316cf260c4748e1a213c264202cd999d6ae57"
+    },
+    {
+      "path": "assets/images/star.png",
+      "sha1": "110d11e0b775d32f0e754158009e257d99e52cc3"
+    },
+    {
+      "path": "assets/images/three-stars.png",
+      "sha1": "af6c6edb196f4351b06788c9996c346baf8d57a4"
+    },
+    {
+      "path": "assets/images/two-stars.png",
+      "sha1": "e82dc209371c3d303621b60b27ab9fd60f51e980"
+    }
+  ]
+}
