@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, StyleSheet, FlatList, Image, Text } from 'react-native';
 import { movieData } from '../../data/MovieData';
 import { ShowMovie } from '../components/MovieComponent';
+import { Icon } from 'react-native-elements';
 
 const HomeScreen = () => {
 
@@ -66,10 +67,14 @@ const HomeScreen = () => {
 
                             <View style={styles.movieDescriptionContainer}>
 
-                                <Text style={styles.title}>{item.title}</Text>
+                                <View style={styles.movieDescription}>
+                                    <Icon name="title" type="material" size={20} />
+                                    <Text style={styles.title}>{item.title}</Text>
+                                </View>
 
                                 <View style={styles.yearContainer}>
-                                    <Text>{item.year}</Text>
+                                    <Icon name="calendar" type="antdesign" size={20} />
+                                    <Text style={styles.descriptionText}>{item.year}</Text>
                                 </View>
 
                                 {
@@ -183,7 +188,8 @@ const styles = StyleSheet.create({
     },
     yearContainer: {
         marginTop: 8,
-        marginBottom: 8
+        marginBottom: 8,
+        flexDirection: 'row',
     },
     mainCategoryContainer: {
         marginTop: 8,
@@ -201,7 +207,14 @@ const styles = StyleSheet.create({
     movieRating: {
         width: 100,
         height: 20
-    }
+    },
+    movieDescription: {
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    descriptionText: {
+        marginLeft: 5
+    },
 });
 
 export default HomeScreen;
