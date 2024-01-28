@@ -79,33 +79,48 @@ const HomeScreen = () => {
 
                                 {
                                     item.rating === 5 ?
-                                        <Image
-                                            style={styles.movieRating}
-                                            source={require('../../assets/images/five-stars.png')}
-                                        />
-                                        :
-                                        item.rating === 4 ?
+                                        <View style={styles.movieDescription}>
+                                            <Icon name="star-rate" type="material" size={20} />
                                             <Image
                                                 style={styles.movieRating}
-                                                source={require('../../assets/images/four-stars.png')}
+                                                source={require('../../assets/images/five-stars.png')}
                                             />
-                                            :
-                                            item.rating === 3 ?
+                                        </View>
+                                        :
+                                        item.rating === 4 ?
+                                            <View style={styles.movieDescription}>
+                                                <Icon name="star-rate" type="material" size={20} />
                                                 <Image
                                                     style={styles.movieRating}
-                                                    source={require('../../assets/images/three-stars.png')}
+                                                    source={require('../../assets/images/four-stars.png')}
                                                 />
+                                            </View>
+                                            :
+                                            item.rating === 3 ?
+                                                <View style={styles.movieDescription}>
+                                                    <Icon name="star-rate" type="material" size={20} />
+                                                    <Image
+                                                        style={styles.movieRating}
+                                                        source={require('../../assets/images/three-stars.png')}
+                                                    />
+                                                </View>
                                                 :
                                                 item.rating === 2 ?
-                                                    <Image
-                                                        style={styles.movieRating}
-                                                        source={require('../../assets/images/two-stars.png')}
-                                                    />
+                                                    <View style={styles.movieDescription}>
+                                                        <Icon name="star-rate" type="material" size={20} />
+                                                        <Image
+                                                            style={styles.movieRating}
+                                                            source={require('../../assets/images/two-stars.png')}
+                                                        />
+                                                    </View>
                                                     :
-                                                    <Image
-                                                        style={styles.movieRating}
-                                                        source={require('../../assets/images/star.png')}
-                                                    />
+                                                    <View style={styles.movieDescription}>
+                                                        <Icon name="star-rate" type="material" size={20} />
+                                                        <Image
+                                                            style={styles.movieRating}
+                                                            source={require('../../assets/images/star.png')}
+                                                        />
+                                                    </View>
                                 }
 
                             </View>
@@ -206,7 +221,8 @@ const styles = StyleSheet.create({
     },
     movieRating: {
         width: 100,
-        height: 20
+        height: 20,
+        marginLeft: 5
     },
     movieDescription: {
         flexDirection: 'row',
