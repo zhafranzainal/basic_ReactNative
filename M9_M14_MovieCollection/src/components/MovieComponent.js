@@ -35,6 +35,10 @@ const styles = StyleSheet.create({
     }
 });
 
+const numberWithCommas = (number) => {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+
 export const ShowMovie = (props) => {
 
     const { image, title, viewers } = props;
@@ -58,7 +62,7 @@ export const ShowMovie = (props) => {
                 <Icon name="eye" type="ionicon" size={20} />
 
                 <View style={styles.viewersText}>
-                    <Text>{viewers}</Text>
+                    <Text>{numberWithCommas(viewers)}</Text>
                 </View>
 
             </View>
