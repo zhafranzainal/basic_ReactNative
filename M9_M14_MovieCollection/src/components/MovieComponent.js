@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Image, Text, StyleSheet } from 'react-native';
+import { Icon } from 'react-native-elements';
 
 const styles = StyleSheet.create({
     horizontalDataContainer: {
@@ -53,9 +54,13 @@ export const ShowMovie = (props) => {
             </View>
 
             <View style={styles.viewersContainer}>
+
+                <Icon name="eye" type="ionicon" size={20} />
+
                 <View style={styles.viewersText}>
                     <Text>{viewers}</Text>
                 </View>
+
             </View>
 
         </View>
