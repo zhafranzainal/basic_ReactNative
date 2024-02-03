@@ -127,7 +127,7 @@ const HomeScreen = (props) => {
                                 }
 
                                 <ButtonComponent
-                                    onPress={() => navigation.navigate('DetailMovie')}
+                                    onPress={() => navigation.navigate('DetailMovie', { item })}
                                 />
 
                             </View>
