@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
         fontSize: 16
     },
     valueContainer: {
-        flex: 3
+        flex: 2
     },
     textValue: {
         textAlign: 'justify',
