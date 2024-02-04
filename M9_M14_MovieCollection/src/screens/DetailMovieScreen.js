@@ -1,5 +1,10 @@
-import { View, Image, Text, StyleSheet } from 'react-native';
+import { View, Image, Text, StyleSheet, ScrollView } from 'react-native';
 import React, { useEffect } from 'react';
+import { MovieExplanation } from '../components/MovieComponent';
+
+const numberWithCommas = (number) => {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
 
 const DetailMovieScreen = (props) => {
 
@@ -15,20 +20,51 @@ const DetailMovieScreen = (props) => {
 
     return (
         <View style={styles.mainContainer}>
-            <View style={styles.movieContainer}>
-                <View style={styles.middle}>
 
-                    <Image
-                        style={styles.image}
-                        source={{ uri: movie.imageLink }}
-                    />
+            <ScrollView>
+                <View style={styles.movieContainer}>
+                    <View style={styles.middle}>
 
-                    <View style={styles.titleContainer}>
-                        <Text style={styles.title}>{movie.title}</Text>
+                        <Image
+                            style={styles.image}
+                            source={{ uri: movie.imageLink }}
+                        />
+
+                        <View style={styles.titleContainer}>
+                            <Text style={styles.title}>{movie.title}</Text>
+                        </View>
+
+                        <MovieExplanation
+                            name='Release year'
+                            value={movie.year}
+                        />
+
+                        <MovieExplanation
+                            name='Starring'
+                            value={movie.starring}
+                        />
+
+                        <MovieExplanation
+                            name='Description'
+                            value={movie.description}
+                        />
+
+                        <MovieExplanation
+                            name='Viewers'
+                            value={numberWithCommas(movie.viewers)}
+                        />
+
+                        <MovieExplanation
+                            name='Rating'
+                            isRating={true}
+                            rating={movie.rating}
+                            value={movie.rating}
+                        />
+
                     </View>
-
                 </View>
-            </View>
+            </ScrollView>
+
         </View>
     )
 
