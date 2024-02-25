@@ -154,6 +154,14 @@ const HomeScreen = (props) => {
                     )
                 }}
 
+                ListEmptyComponent={
+                    <View style={{ alignItems: 'center' }}>
+                        <Text>
+                            No item in this category.
+                        </Text>
+                    </View>
+                }
+
                 ListHeaderComponent={
                     <View>
 
@@ -178,6 +186,16 @@ const HomeScreen = (props) => {
                                     />
                                 )
                             }}
+
+                            contentContainerStyle={{ flex: mostViewed.length === 0 ? 1 : null }}
+                            ListEmptyComponent={
+                                <View style={{ alignItems: 'center', flex: 1 }}>
+                                    <Text>
+                                        No item in this category.
+                                    </Text>
+                                </View>
+                            }
+
                         />
 
                         <View style={styles.mainCategoryContainer}>
