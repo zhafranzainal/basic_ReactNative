@@ -8,10 +8,13 @@ const numberWithCommas = (number) => {
 
 export const ShowMovie = (props) => {
 
-    const { image, title, viewers } = props;
+    const { image, title, viewers, isHome } = props;
 
     return (
-        <View style={styles.horizontalDataContainer}>
+        <View style={[
+            styles.horizontalDataContainer,
+            { flex: isHome ? null : 1 }
+        ]}>
 
             <Image
                 style={styles.movieImage}
