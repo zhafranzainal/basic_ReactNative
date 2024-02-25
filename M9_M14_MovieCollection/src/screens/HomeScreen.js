@@ -11,6 +11,7 @@ const HomeScreen = (props) => {
 
     const [recommended, setRecommended] = useState([]);
     const [mostViewed, setMostViewed] = useState([]);
+    const [allMostViewed, setAllMostViewed] = useState([]);
 
     const compareRating = (movieA, movieB) => {
 
@@ -60,6 +61,7 @@ const HomeScreen = (props) => {
 
         setRecommended(threeRecommended);
         setMostViewed(threeMostViewed);
+        setAllMostViewed(sortedMostViewed);
 
     }, []);
 
@@ -174,7 +176,11 @@ const HomeScreen = (props) => {
                             </View>
 
                             <View style={styles.seeAllContainer}>
-                                <TouchableOpacity>
+                                <TouchableOpacity
+                                    onPress={
+                                        () => navigation.navigate('MostViewed', { allMostViewed })
+                                    }
+                                >
                                     <Text style={styles.seeAllText}>See All</Text>
                                 </TouchableOpacity>
                             </View>
