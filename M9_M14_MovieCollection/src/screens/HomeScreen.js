@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, StyleSheet, FlatList, Image, Text } from 'react-native';
+import { View, StyleSheet, FlatList, Image, Text, TouchableOpacity } from 'react-native';
 import { movieData } from '../../data/MovieData';
 import { ShowMovie } from '../components/MovieComponent';
 import { Icon } from 'react-native-elements';
@@ -166,11 +166,19 @@ const HomeScreen = (props) => {
                     <View>
 
                         <View style={styles.mainCategoryContainer}>
+
                             <View style={styles.categoryContainer}>
                                 <Text style={styles.categoryText}>
                                     Most Viewed
                                 </Text>
                             </View>
+
+                            <View style={styles.seeAllContainer}>
+                                <TouchableOpacity>
+                                    <Text style={styles.seeAllText}>See All</Text>
+                                </TouchableOpacity>
+                            </View>
+
                         </View>
 
                         <FlatList
@@ -273,6 +281,15 @@ const styles = StyleSheet.create({
     },
     descriptionText: {
         marginLeft: 5
+    },
+    seeAllContainer: {
+        flex: 1,
+        alignItems: 'flex-end',
+        justifyContent: 'center'
+    },
+    seeAllText: {
+        color: '#009688',
+        textDecorationLine: 'underline'
     },
 });
 
