@@ -51,12 +51,15 @@ const HomeScreen = (props) => {
         setMostViewed(sortedMostViewed);
 
         const threeRecommended = [];
+        const threeMostViewed = [];
 
         for (let i = 0; i < 3; i++) {
             threeRecommended.push(sortedRecommended[i]);
+            threeMostViewed.push(sortedMostViewed[i]);
         };
 
         setRecommended(threeRecommended);
+        setMostViewed(threeMostViewed);
 
     }, []);
 
