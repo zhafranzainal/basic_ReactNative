@@ -15,7 +15,19 @@ const MainNavigator = () => {
                 <Stack.Screen
                     name='Home'
                     component={HomeScreen}
-                    options={{ headerShown: true }}
+                    options={{
+                        headerShown: true,
+                        headerStyle: {
+                            backgroundColor: '#65c3ba'
+                        },
+                        title: 'Movie Collection',
+                        headerTitleStyle: {
+                            color: 'white',
+                            fontSize: 24
+                        },
+                        headerTitleAlign: 'center',
+                        headerLeft: null
+                    }}
                 />
 
                 <Stack.Screen
