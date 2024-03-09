@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../screens/HomeScreen';
 import DetailMovieScreen from '../screens/DetailMovieScreen';
 import MostViewedScreen from '../screens/MostViewedScreen';
+import RecommendedScreen from '../screens/RecommendedScreen';
 
 const Stack = createStackNavigator();
 
@@ -57,6 +58,23 @@ const MainNavigator = () => {
                             backgroundColor: '#65c3ba'
                         },
                         title: 'Most Viewed',
+                        headerTitleStyle: {
+                            color: 'white',
+                            fontSize: 24
+                        },
+                        headerTitleAlign: 'left',
+                        headerLeft: null
+                    }}
+                />
+
+                <Stack.Screen
+                    name='Recommended'
+                    component={RecommendedScreen}
+                    options={{
+                        headerShown: true,
+                        headerStyle: {
+                            backgroundColor: '#65c3ba'
+                        },
                         headerTitleStyle: {
                             color: 'white',
                             fontSize: 24
