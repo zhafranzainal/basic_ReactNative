@@ -51,7 +51,19 @@ const MainNavigator = () => {
                 <Stack.Screen
                     name='MostViewed'
                     component={MostViewedScreen}
-                    options={{ headerShown: true }}
+                    options={{
+                        headerShown: true,
+                        headerStyle: {
+                            backgroundColor: '#65c3ba'
+                        },
+                        title: 'Most Viewed',
+                        headerTitleStyle: {
+                            color: 'white',
+                            fontSize: 24
+                        },
+                        headerTitleAlign: 'left',
+                        headerLeft: null
+                    }}
                 />
 
             </Stack.Navigator>
