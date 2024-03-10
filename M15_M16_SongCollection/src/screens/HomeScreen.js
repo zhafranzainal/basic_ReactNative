@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity } from 'react-native';
 import { songData } from '../../data/SongData';
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
 
     const [song, setSong] = useState([]);
 
@@ -85,7 +85,12 @@ const HomeScreen = () => {
                                 }
 
                                 <View style={styles.buttonContainer}>
-                                    <TouchableOpacity style={styles.insideButtonContainer}>
+                                    <TouchableOpacity
+                                        style={styles.insideButtonContainer}
+                                        onPress={
+                                            () => navigation.navigate('Detail', { item })
+                                        }
+                                    >
                                         <Text style={{ color: 'white' }}>SEE DETAILS</Text>
                                     </TouchableOpacity>
                                 </View>
