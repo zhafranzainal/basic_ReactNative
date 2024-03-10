@@ -1,13 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity } from 'react-native';
 import { songData } from '../../data/SongData';
 
 const HomeScreen = () => {
+
+    const [song, setSong] = useState([]);
+
+    const compareRating = (songA, songB) => {
+
+        const ratingA = songA.rating;
+        const ratingB = songB.rating;
+
+        if (ratingA > ratingB) {
+            return -1;
+        } else if (ratingA < ratingB) {
+            return 1;
+        } else {
+            return 0;
+        }
+
+    };
+
+    useEffect(() => {
+
+        const sortedSong = [...songData].sort(compareRating);
+        setSong(sortedSong);
+
+    }, []);
+
     return (
         <View style={{ padding: 8 }}>
 
             <FlatList
-                data={songData}
+                data={song}
                 keyExtractor={(item) => item.id}
                 renderItem={({ item }) => {
                     return (
@@ -84,6 +109,7 @@ const HomeScreen = () => {
 
         </View >
     )
+
 };
 
 const styles = StyleSheet.create({
