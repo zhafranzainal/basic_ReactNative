@@ -20,17 +20,19 @@ const HomeScreen = () => {
 
                             <View style={styles.songContainer}>
 
-                                <Text>{item.title}</Text>
+                                <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
+                                    {item.title}
+                                </Text>
 
-                                <View>
+                                <View style={styles.singerContainer}>
                                     <Text>{item.singer}</Text>
                                 </View>
 
                                 <Text>{item.rating}</Text>
 
-                                <View>
-                                    <TouchableOpacity >
-                                        <Text>SEE DETAILS</Text>
+                                <View style={styles.buttonContainer}>
+                                    <TouchableOpacity style={styles.insideButtonContainer}>
+                                        <Text style={{ color: 'white' }}>SEE DETAILS</Text>
                                     </TouchableOpacity>
                                 </View>
 
@@ -66,11 +68,30 @@ const styles = StyleSheet.create({
     },
     songImage: {
         width: 120,
-        height: 120,
+        height: 120
     },
     songContainer: {
         marginLeft: 8,
         flex: 1
+    },
+    singerContainer: {
+        marginTop: 8,
+        marginBottom: 8
+    },
+    ratingImage: {
+        width: 100,
+        height: 20
+    },
+    buttonContainer: {
+        alignItems: 'baseline',
+        marginTop: 8
+    },
+    insideButtonContainer: {
+        padding: 8,
+        borderWidth: 1,
+        borderRadius: 10,
+        borderColor: '#A6A6BD',
+        backgroundColor: '#AFCAE8'
     },
 });
 
