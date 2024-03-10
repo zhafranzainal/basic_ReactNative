@@ -28,7 +28,36 @@ const HomeScreen = () => {
                                     <Text>{item.singer}</Text>
                                 </View>
 
-                                <Text>{item.rating}</Text>
+                                {
+                                    item.rating === 5 ?
+                                        <Image
+                                            style={styles.ratingImage}
+                                            source={require('../../assets/images/five-stars.png')}
+                                        />
+                                        :
+                                        item.rating === 4 ?
+                                            <Image
+                                                style={styles.ratingImage}
+                                                source={require('../../assets/images/four-stars.png')}
+                                            />
+                                            :
+                                            item.rating === 3 ?
+                                                <Image
+                                                    style={styles.ratingImage}
+                                                    source={require('../../assets/images/three-stars.png')}
+                                                />
+                                                :
+                                                item.rating === 2 ?
+                                                    <Image
+                                                        style={styles.ratingImage}
+                                                        source={require('../../assets/images/two-stars.png')}
+                                                    />
+                                                    :
+                                                    <Image
+                                                        style={styles.ratingImage}
+                                                        source={require('../../assets/images/star.png')}
+                                                    />
+                                }
 
                                 <View style={styles.buttonContainer}>
                                     <TouchableOpacity style={styles.insideButtonContainer}>
