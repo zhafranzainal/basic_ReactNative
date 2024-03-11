@@ -20,7 +20,7 @@ const MainNavigator = () => {
                 <Stack.Screen
                     name='Detail'
                     component={DetailScreen}
-                    options={{ headerShown: false }}
+                    options={{ headerShown: true }}
                 />
 
             </Stack.Navigator>
