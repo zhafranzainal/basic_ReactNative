@@ -14,13 +14,34 @@ const MainNavigator = () => {
                 <Stack.Screen
                     name='Home'
                     component={HomeScreen}
-                    options={{ headerShown: true }}
+                    options={{
+                        headerShown: true,
+                        headerStyle: {
+                            backgroundColor: '#CAB0C3'
+                        },
+                        headerTitleStyle: {
+                            color: 'white',
+                            fontSize: 24
+                        },
+                        headerTitleAlign: 'center',
+                    }}
                 />
 
                 <Stack.Screen
                     name='Detail'
                     component={DetailScreen}
-                    options={{ headerShown: true }}
+                    options={{
+                        headerShown: true,
+                        headerStyle: {
+                            backgroundColor: '#CAB0C3'
+                        },
+                        headerTitleStyle: {
+                            color: 'white',
+                            fontSize: 24
+                        },
+                        headerTitleAlign: 'center',
+                        headerLeft: null
+                    }}
                 />
 
             </Stack.Navigator>
