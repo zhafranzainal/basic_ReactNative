@@ -27,7 +27,48 @@ const DetailScreen = ({ route }) => {
             <SongComponent name='Genre' description={song.genre} />
             <SongComponent name='Songwriters' description={song.songwriters} />
 
-            <Text>Rating</Text>
+            <View style={styles.ratingContainer}>
+
+                <View style={{ flex: 1 }}>
+                    <Text>Rating</Text>
+                </View>
+
+                <Text> : </Text>
+
+                <View style={{ flex: 3 }}>
+                    {
+                        song.rating === 5 ?
+                            <Image
+                                style={styles.ratingImage}
+                                source={require('../../assets/images/five-stars.png')}
+                            />
+                            :
+                            song.rating === 4 ?
+                                <Image
+                                    style={styles.ratingImage}
+                                    source={require('../../assets/images/four-stars.png')}
+                                />
+                                :
+                                song.rating === 3 ?
+                                    <Image
+                                        style={styles.ratingImage}
+                                        source={require('../../assets/images/three-stars.png')}
+                                    />
+                                    :
+                                    song.rating === 2 ?
+                                        <Image
+                                            style={styles.ratingImage}
+                                            source={require('../../assets/images/two-stars.png')}
+                                        />
+                                        :
+                                        <Image
+                                            style={styles.ratingImage}
+                                            source={require('../../assets/images/star.png')}
+                                        />
+                    }
+                </View>
+
+            </View>
 
         </View>
     )
@@ -49,6 +90,15 @@ const styles = StyleSheet.create({
     titleContainer: {
         marginTop: 8,
         marginBottom: 16
+    },
+    ratingImage: {
+        width: 100,
+        height: 20
+    },
+    ratingContainer: {
+        flexDirection: 'row',
+        marginTop: 8,
+        marginBottom: 8
     },
 });
 
