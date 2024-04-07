@@ -20,6 +20,7 @@ const LoginScreen = () => {
 
                 <View style={styles.inputContainer}>
                     <Input title="Username" placeholder="Username" />
+                    <Input title="Password" placeholder="Password" />
                 </View>
 
                 <Button text="Login" />
