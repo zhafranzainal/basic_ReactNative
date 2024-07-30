@@ -26,9 +26,7 @@ const RegisterScreen = (props) => {
                     </Text>
 
                     <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-                        <Text style={styles.loginText}>
-                            Login
-                        </Text>
+                        <Text style={styles.loginText}> Login</Text>
                     </TouchableOpacity>
 
                 </View>

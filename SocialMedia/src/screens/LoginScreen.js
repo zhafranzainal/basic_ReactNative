@@ -3,7 +3,9 @@ import { View, Text, ScrollView, Image, TouchableOpacity, StyleSheet } from 'rea
 import { Input } from '../components/InputComponent';
 import { Button } from '../components/ButtonComponent';
 
-const LoginScreen = () => {
+const LoginScreen = (props) => {
+
+    const { navigation } = props;
 
     return (
         <ScrollView contentContainerStyle={styles.scroll}>
@@ -29,7 +31,7 @@ const LoginScreen = () => {
 
                     <Text style={styles.text}>Don't have an account?</Text>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Register')}>
                         <Text style={styles.registerText}> Register</Text>
                     </TouchableOpacity>
 
