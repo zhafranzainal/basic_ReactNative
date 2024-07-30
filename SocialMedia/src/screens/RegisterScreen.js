@@ -2,17 +2,29 @@ import React, { useEffect } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
 import { Input } from '../components/InputComponent';
 import { Button } from '../components/ButtonComponent';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { createProfile } from '../../store/actions/profileAction';
 
 const RegisterScreen = (props) => {
 
     const { navigation } = props;
+    const dispatch = useDispatch();
 
     const globalProfileData = useSelector(store => store.profileReducer);
 
     useEffect(() => {
         console.log(globalProfileData);
     }, [globalProfileData]);
+
+    useEffect(() => {
+        dispatch(
+            createProfile({
+                username: 'yourName',
+                email: 'yourEmail',
+                password: 'yourPass'
+            })
+        )
+    }, []);
 
     return (
         <ScrollView contentContainerStyle={styles.scroll}>
