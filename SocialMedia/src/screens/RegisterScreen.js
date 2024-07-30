@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import { Input } from '../components/InputComponent';
 import { Button } from '../components/ButtonComponent';
 import { useDispatch, useSelector } from 'react-redux';
@@ -50,6 +50,16 @@ const RegisterScreen = (props) => {
         }
         else {
             dispatch(createProfile(form));
+            Alert.alert(
+                "Registration Success",
+                "Successfully create an account!",
+                [
+                    {
+                        text: "OK",
+                        onPress: () => navigation.navigate('Login')
+                    }
+                ]
+            );
         }
     };
 
