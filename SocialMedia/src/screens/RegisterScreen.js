@@ -10,6 +10,8 @@ const RegisterScreen = (props) => {
     const { navigation } = props;
     const dispatch = useDispatch();
 
+    const [isEmailFormat, setIsEmailFormat] = useState(true);
+
     const [form, setForm] = useState({
         username: '',
         email: '',
@@ -17,10 +19,22 @@ const RegisterScreen = (props) => {
     });
 
     const onChangeInput = (inputType, value) => {
+
+        const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+
+        if (inputType === 'email') {
+            if (!emailRegex.test(value)) {
+                setIsEmailFormat(false);
+            } else {
+                setIsEmailFormat(true);
+            };
+        };
+
         setForm({
             ...form,
             [inputType]: value
         });
+
     };
 
     useEffect(() => {
@@ -31,7 +45,7 @@ const RegisterScreen = (props) => {
     }, [form]);
 
     const sendData = () => {
-        if (form.username === '' || form.email === '' || form.password === '') {
+        if (form.username === '' || form.email === '' || form.password === '' || !isEmailFormat) {
             alert('Make sure you fill all the fields with the right information!');
         }
         else {
@@ -45,6 +59,12 @@ const RegisterScreen = (props) => {
         console.log('GLOBAL STATE ON REGISTER PAGE');
         console.log(globalProfileData);
     }, [globalProfileData]);
+
+    useEffect(() => {
+        if (form.email === '') {
+            setIsEmailFormat(true);
+        }
+    }, [form.email]);
 
     return (
         <ScrollView contentContainerStyle={styles.scroll}>
@@ -63,6 +83,17 @@ const RegisterScreen = (props) => {
                         placeholder="Email"
                         onChangeText={(text) => onChangeInput('email', text)}
                     />
+
+                    {
+                        isEmailFormat ?
+                            null
+                            :
+                            <View style={styles.warningContainer}>
+                                <Text style={styles.warning}>
+                                    Please input the right email format!
+                                </Text>
+                            </View>
+                    }
 
                     <Input
                         title="Password"
@@ -118,6 +149,13 @@ const styles = StyleSheet.create({
     loginText: {
         color: '#1A5B0A',
         fontSize: 16
+    },
+    warningContainer: {
+        marginBottom: 16,
+        marginLeft: 16
+    },
+    warning: {
+        color: 'red'
     }
 });
 
