@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
 import { Input } from '../components/InputComponent';
 import { Button } from '../components/ButtonComponent';
+import { useSelector } from 'react-redux';
 
 const RegisterScreen = (props) => {
 
     const { navigation } = props;
+
+    const globalProfileData = useSelector(store => store.profileReducer);
+
+    useEffect(() => {
+        console.log(globalProfileData);
+    }, [globalProfileData]);
 
     return (
         <ScrollView contentContainerStyle={styles.scroll}>
