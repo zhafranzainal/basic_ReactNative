@@ -11,6 +11,7 @@ const RegisterScreen = (props) => {
     const dispatch = useDispatch();
 
     const [isEmailFormat, setIsEmailFormat] = useState(true);
+    const [isPassVisible, setIsPassVisible] = useState(false);
 
     const [form, setForm] = useState({
         username: '',
@@ -109,6 +110,10 @@ const RegisterScreen = (props) => {
                         title="Password"
                         placeholder="Password"
                         onChangeText={(text) => onChangeInput('password', text)}
+                        isPassword={true}
+                        secureTextEntry={isPassVisible ? false : true}
+                        iconName={isPassVisible ? 'eye-off' : 'eye'}
+                        onPress={() => setIsPassVisible(!isPassVisible)}
                     />
 
                 </View>
