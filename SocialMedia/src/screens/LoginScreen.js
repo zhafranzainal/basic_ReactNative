@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { Input } from '../components/InputComponent';
 import { Button } from '../components/ButtonComponent';
@@ -6,6 +6,7 @@ import { Button } from '../components/ButtonComponent';
 const LoginScreen = (props) => {
 
     const { navigation } = props;
+    const [isPassVisible, setIsPassVisible] = useState(false);
 
     return (
         <ScrollView contentContainerStyle={styles.scroll}>
@@ -21,8 +22,18 @@ const LoginScreen = (props) => {
                 </View>
 
                 <View style={styles.inputContainer}>
+
                     <Input title="Username" placeholder="Username" />
-                    <Input title="Password" placeholder="Password" />
+
+                    <Input
+                        title="Password"
+                        placeholder="Password"
+                        isPassword={true}
+                        secureTextEntry={isPassVisible ? false : true}
+                        iconName={isPassVisible ? 'eye-off' : 'eye'}
+                        onPress={() => setIsPassVisible(!isPassVisible)}
+                    />
+
                 </View>
 
                 <Button text="Login" />
