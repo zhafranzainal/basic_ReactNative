@@ -1,8 +1,13 @@
 import React from 'react';
-import { View, Text, ScrollView, Image, StyleSheet } from 'react-native';
+import { View, ScrollView, Image, StyleSheet } from 'react-native';
+import { useSelector } from 'react-redux';
+
 import { Input } from '../components/InputComponent';
 
 const ProfileScreen = () => {
+
+    const globalData = useSelector(store => store.profileReducer);
+
     return (
         <ScrollView contentContainerStyle={styles.scroll}>
             <View style={styles.mainContainer}>
@@ -18,14 +23,17 @@ const ProfileScreen = () => {
                     <Input
                         title="Username"
                         editable={false}
+                        value={globalData.username}
                     />
                     <Input
                         title="Email"
                         editable={false}
+                        value={globalData.email}
                     />
                     <Input
                         title="Password"
                         editable={false}
+                        value={globalData.password}
                     />
                 </View>
 
