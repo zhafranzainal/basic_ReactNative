@@ -3,6 +3,7 @@ import { View, ScrollView, Image, StyleSheet } from 'react-native';
 import { useSelector } from 'react-redux';
 
 import { Input } from '../components/InputComponent';
+import { Button } from '../components/ButtonComponent';
 
 const ProfileScreen = () => {
 
@@ -36,6 +37,11 @@ const ProfileScreen = () => {
                         value={globalData.password}
                     />
                 </View>
+
+                <Button
+                    text="Logout"
+                    isLogout={true}
+                />
 
             </View>
         </ScrollView>
