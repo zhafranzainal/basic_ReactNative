@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
 import { View, ScrollView, Image, StyleSheet, Modal, Text } from 'react-native';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { Input } from '../components/InputComponent';
 import { Button } from '../components/ButtonComponent';
+import { loginUser } from '../../store/actions/profileAction';
 
 const ProfileScreen = () => {
 
     const globalData = useSelector(store => store.profileReducer);
 
     const [isModalVisible, setIsModalVisible] = useState(false);
+
+    const dispatch = useDispatch();
+
+    const onLogout = () => {
+        setIsModalVisible(false);
+        dispatch(loginUser(false));
+    };
 
     return (
         <ScrollView contentContainerStyle={styles.scroll}>
@@ -62,8 +70,18 @@ const ProfileScreen = () => {
                             </Text>
 
                             <View style={styles.modalButton}>
-                                <Button text="yes" />
-                                <Button text="no" isLogout={true} />
+
+                                <Button
+                                    text="yes"
+                                    onPress={() => onLogout()}
+                                />
+
+                                <Button
+                                    text="no"
+                                    isLogout={true}
+                                    onPress={() => setIsModalVisible(false)}
+                                />
+
                             </View>
 
                         </View>
