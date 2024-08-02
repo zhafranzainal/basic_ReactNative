@@ -9,6 +9,7 @@ import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
 import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
+import { useSelector } from 'react-redux';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -82,38 +83,44 @@ const StartScreen = () => {
 };
 
 const MainNavigator = () => {
+
+    const isLogin = useSelector(store => store.profileReducer.isLogin);
+
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName='Login'>
-
-                <Stack.Screen
-                    name='Login'
-                    component={LoginScreen}
-                    options={{
-                        headerShown: false,
-                    }}
-                />
-
-                <Stack.Screen
-                    name="Register"
-                    component={RegisterScreen}
-                    options={{
-                        headerTitleAlign: 'center',
-                        headerLeft: null
-                    }}
-                />
-
-                <Stack.Screen
-                    name="Start"
-                    component={StartScreen}
-                    options={{
-                        headerShown: false
-                    }}
-                />
-
-            </Stack.Navigator>
-        </NavigationContainer >
+            {
+                isLogin ?
+                    <Stack.Navigator initialRouteName="Start">
+                        <Stack.Screen
+                            name="Start"
+                            component={StartScreen}
+                            options={{
+                                headerShown: false
+                            }}
+                        />
+                    </Stack.Navigator>
+                    :
+                    <Stack.Navigator initialRouteName="Login">
+                        <Stack.Screen
+                            name="Login"
+                            component={LoginScreen}
+                            options={{
+                                headerShown: false
+                            }}
+                        />
+                        <Stack.Screen
+                            name="Register"
+                            component={RegisterScreen}
+                            options={{
+                                headerTitleAlign: 'center',
+                                headerLeft: null
+                            }}
+                        />
+                    </Stack.Navigator>
+            }
+        </NavigationContainer>
     );
+
 };
 
 export default MainNavigator;
