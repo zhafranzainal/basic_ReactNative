@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, ScrollView, Image, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, ScrollView, Image, StyleSheet, Modal, Text } from 'react-native';
 import { useSelector } from 'react-redux';
 
 import { Input } from '../components/InputComponent';
@@ -8,6 +8,8 @@ import { Button } from '../components/ButtonComponent';
 const ProfileScreen = () => {
 
     const globalData = useSelector(store => store.profileReducer);
+
+    const [isModalVisible, setIsModalVisible] = useState(false);
 
     return (
         <ScrollView contentContainerStyle={styles.scroll}>
@@ -41,7 +43,32 @@ const ProfileScreen = () => {
                 <Button
                     text="Logout"
                     isLogout={true}
+                    onPress={() => setIsModalVisible(true)}
                 />
+
+                <Modal
+                    animationType="slide"
+                    transparent={true}
+                    visible={isModalVisible}
+                    onRequestClose={() => {
+                        setIsModalVisible(!isModalVisible);
+                    }}
+                >
+                    <View style={styles.backgroundView}>
+                        <View style={styles.modalView}>
+
+                            <Text style={styles.modalText}>
+                                Are you sure want to logout?
+                            </Text>
+
+                            <View style={styles.modalButton}>
+                                <Button text="yes" />
+                                <Button text="no" isLogout={true} />
+                            </View>
+
+                        </View>
+                    </View>
+                </Modal>
 
             </View>
         </ScrollView>
@@ -69,6 +96,31 @@ const styles = StyleSheet.create({
     inputContainer: {
         padding: 16,
         width: '100%'
+    },
+    backgroundView: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)'
+    },
+    modalView: {
+        margin: 16,
+        backgroundColor: 'white',
+        borderRadius: 20,
+        padding: 16,
+        alignItems: 'center',
+        borderColor: 'black',
+        borderWidth: 1,
+        width: '80%'
+    },
+    modalText: {
+        marginTop: 16,
+        marginBottom: 16,
+        textAlign: 'center',
+        fontSize: 16
+    },
+    modalButton: {
+        flexDirection: 'row'
     }
 });
 
