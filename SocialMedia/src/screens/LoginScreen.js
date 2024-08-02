@@ -25,7 +25,7 @@ const LoginScreen = (props) => {
         }
         else if ((username.toLowerCase() === globalProfileData.username.toLowerCase())
             && (password.toLowerCase() === globalProfileData.password.toLowerCase())) {
-            navigation.navigate('Home');
+            navigation.navigate('Start');
         }
         else {
             alert("Your username and password didn't match!");
