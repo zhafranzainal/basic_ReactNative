@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements';
 
-const NoteListScreen = () => {
+const NoteListScreen = ({ navigation }) => {
 
     return (
         <View style={styles.mainContainer}>
@@ -14,7 +14,10 @@ const NoteListScreen = () => {
             </View>
 
             <View style={styles.buttonContainer}>
-                <TouchableOpacity style={styles.addButton}>
+                <TouchableOpacity
+                    style={styles.addButton}
+                    onPress={() => navigation.navigate('CreateNote')}
+                >
                     <Icon
                         name="plus"
                         type="antdesign"
