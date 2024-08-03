@@ -1,14 +1,44 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements';
 
 import { data } from '../../data/Data';
 
 const HomeScreen = () => {
+
+    const [modifiedData, setModifiedData] = useState([]);
+
+    useEffect(() => {
+
+        const newData = data.map((item) => {
+            item.likeStatus = false;
+            return item;
+        });
+
+        setModifiedData(newData);
+
+    }, []);
+
+    const likePhoto = (id, likeStatus) => {
+
+        const likeStatusChanged = modifiedData.map((item) => {
+
+            if (item.id === id) {
+                item.likeStatus = !likeStatus;
+            }
+
+            return item;
+
+        });
+
+        setModifiedData(likeStatusChanged);
+
+    };
+
     return (
         <View>
             <FlatList
-                data={data}
+                data={modifiedData}
                 keyExtractor={(item) => item.id}
                 contentContainerStyle={styles.flatListContainer}
                 renderItem={({ item }) => {
@@ -47,10 +77,23 @@ const HomeScreen = () => {
 
                             <View style={styles.bottomContainer}>
 
-                                <TouchableOpacity style={styles.horizontalContainer}>
-                                    <Icon name='heart-o' type='font-awesome' size={20} />
+                                <TouchableOpacity
+                                    style={styles.horizontalContainer}
+                                    onPress={() => likePhoto(item.id, item.likeStatus)}
+                                >
+                                    <Icon
+                                        name={item.likeStatus ? 'heart' : 'heart-o'}
+                                        type='font-awesome'
+                                        size={20}
+                                        color={item.likeStatus ? 'red' : null}
+                                    />
                                     <View style={styles.normalMarginLeft}>
-                                        <Text>Like</Text>
+                                        {
+                                            item.likeStatus ?
+                                                <Text>Unlike</Text>
+                                                :
+                                                <Text>Like</Text>
+                                        }
                                     </View>
                                 </TouchableOpacity>
 
