@@ -7,7 +7,7 @@ import TryCodeScreen from './src/screens/TryCodeScreen';
 const App = () => {
   return (
     <SafeAreaProvider>
-      <TryCodeScreen />
+      <MainNavigator />
     </SafeAreaProvider>
   );
 }
