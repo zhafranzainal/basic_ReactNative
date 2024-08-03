@@ -36,7 +36,10 @@ const styles = StyleSheet.create({
         backgroundColor: 'red',
         width: '25%',
         height: '25%',
-        borderWidth: 1
+        borderWidth: 1,
+        left: 20,
+        top: 20,
+        zIndex:1
     }
 });
 
