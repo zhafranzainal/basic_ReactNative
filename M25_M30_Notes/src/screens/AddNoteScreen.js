@@ -12,13 +12,7 @@ const AddNoteScreen = () => {
 
         const allData = realm.objects('Note');
         const dataLength = allData.length;
-        let newId;
-
-        if (dataLength === 0) {
-            newId = 1;
-        } else {
-            newId = allData[dataLength - 1].id + 1;
-        }
+        const newId = dataLength === 0 ? 1 : allData[dataLength - 1].id + 1;
 
         if (newNote !== '') {
 
