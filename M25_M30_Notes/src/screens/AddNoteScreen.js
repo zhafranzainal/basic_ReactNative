@@ -9,17 +9,33 @@ const AddNoteScreen = () => {
     const [tempNote, setTempNote] = useState('');
 
     const saveNote = (newNote) => {
+
+        const allData = realm.objects('Note');
+        const dataLength = allData.length;
+        let newId;
+
+        if (dataLength === 0) {
+            newId = 1;
+        } else {
+            newId = allData[dataLength - 1].id + 1;
+        }
+
         if (newNote !== '') {
+
             realm.write(() => {
                 realm.create("Note", {
-                    id: 1,
+                    id: newId,
                     note: newNote
                 });
             });
+
             alert('Successfully saved your note!');
+            console.log(allData);
+
         } else {
             alert('Empty note!');
         }
+
     };
 
     return (
