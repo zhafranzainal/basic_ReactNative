@@ -12,14 +12,19 @@ const AddNoteScreen = () => {
 
         const allData = realm.objects('Note');
         const dataLength = allData.length;
-        const newId = dataLength === 0 ? 1 : allData[dataLength - 1].id + 1;
+        let lastIdFromRealm = 0;
+
+        if (dataLength !== 0) {
+            lastIdFromRealm = allData[dataLength - 1].id;
+        }
 
         if (newNote !== '') {
 
             realm.write(() => {
                 realm.create("Note", {
-                    id: newId,
-                    note: newNote
+                    id: dataLength === 0 ? 1 : lastIdFromRealm + 1,
+                    note: newNote,
+                    date: new Date().toISOString()
                 });
             });
 

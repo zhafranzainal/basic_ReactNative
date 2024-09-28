@@ -2,7 +2,8 @@ export const NoteSchema = {
     name: 'Note',
     properties: {
         id: 'int',
-        note: 'string'
+        note: 'string',
+        date: 'string'
     },
     primaryKey: 'id'
 };
