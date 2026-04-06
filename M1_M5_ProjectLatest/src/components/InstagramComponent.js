@@ -66,21 +66,21 @@ export const Feed = (props) => {
                 <View style={{ flexDirection: 'row' }}>
 
                     <View style={{ margin: 8 }}>
-                        <FontAwesome name='heart' size={26} color='red' style={{ margin: 8 }} />
+                        <FontAwesome name='heart-o' size={26} style={{ margin: 8 }} />
                     </View>
 
                     <View style={{ margin: 8 }}>
-                        <FontAwesome name='comment' size={26} color='black' style={{ margin: 8 }} />
+                        <FontAwesome name='comment-o' size={26} style={{ margin: 8 }} />
                     </View>
 
                     <View style={{ margin: 8 }}>
-                        <FontAwesome name='paper-plane' size={26} color='black' style={{ margin: 8 }} />
+                        <FontAwesome name='paper-plane-o' size={26} style={{ margin: 8 }} />
                     </View>
 
                 </View>
 
                 <View style={{ margin: 8 }}>
-                    <FontAwesome name='bookmark' size={26} color='black' style={{ margin: 8 }} />
+                    <FontAwesome name='bookmark-o' size={26} style={{ margin: 8 }} />
                 </View>
 
             </View >
