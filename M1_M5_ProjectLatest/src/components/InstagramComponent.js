@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
 import { Icon } from "@rneui/themed";
-import { FontAwesome } from "@react-native-vector-icons/fontawesome";
+import FontAwesome from "@react-native-vector-icons/fontawesome";
+import Ionicons from "@react-native-vector-icons/ionicons";
 
 export const Feed = (props) => {
 
@@ -74,7 +75,7 @@ export const Feed = (props) => {
                     </View>
 
                     <View style={{ margin: 8 }}>
-                        <FontAwesome name='paper-plane-o' size={26} style={{ margin: 8 }} />
+                        <Ionicons name='paper-plane-outline' size={26} style={{ margin: 8 }} />
                     </View>
 
                 </View>
