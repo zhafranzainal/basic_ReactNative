@@ -1,8 +1,6 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
 import { Icon } from "@rneui/themed";
-import FontAwesome from "@react-native-vector-icons/fontawesome";
-import Ionicons from "@react-native-vector-icons/ionicons";
 
 export const Feed = (props) => {
 
@@ -67,21 +65,21 @@ export const Feed = (props) => {
                 <View style={{ flexDirection: 'row' }}>
 
                     <View style={{ margin: 8 }}>
-                        <FontAwesome name='heart-o' size={26} style={{ margin: 8 }} />
+                        <Icon name='heart-o' type='font-awesome' size={26} style={{ margin: 8 }} />
                     </View>
 
                     <View style={{ margin: 8 }}>
-                        <FontAwesome name='comment-o' size={26} style={{ margin: 8 }} />
+                        <Icon name='comment-o' type='font-awesome' size={26} style={{ margin: 8 }} />
                     </View>
 
                     <View style={{ margin: 8 }}>
-                        <Ionicons name='paper-plane-outline' size={26} style={{ margin: 8 }} />
+                        <Icon name='paper-plane-outline' type='ionicon' size={26} style={{ margin: 8 }} />
                     </View>
 
                 </View>
 
                 <View style={{ margin: 8 }}>
-                    <FontAwesome name='bookmark-o' size={26} style={{ margin: 8 }} />
+                    <Icon name='bookmark-o' type='font-awesome' size={26} style={{ margin: 8 }} />
                 </View>
 
             </View >

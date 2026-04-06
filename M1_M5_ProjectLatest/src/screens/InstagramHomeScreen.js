@@ -1,8 +1,7 @@
 import React from 'react';
 import { View, Text, ScrollView } from 'react-native';
 import { Feed, Story } from '../components/InstagramComponent';
-import FontAwesome from '@react-native-vector-icons/fontawesome';
-import Ionicons from '@react-native-vector-icons/ionicons';
+import { Icon } from '@rneui/themed';
 
 const InstagramHomeScreen = () => {
     return (
@@ -28,15 +27,15 @@ const InstagramHomeScreen = () => {
                 }}>
 
                     <View style={{ margin: 8 }}>
-                        <FontAwesome name="plus-square-o" size={26} />
+                        <Icon name='plus-square-o' type='font-awesome' size={26} />
                     </View>
 
                     <View style={{ margin: 8 }}>
-                        <FontAwesome name="heart-o" size={26} style={{ marginLeft: 16 }} />
+                        <Icon name='heart-o' type='font-awesome' size={26} style={{ marginLeft: 16 }} />
                     </View>
 
                     <View style={{ margin: 8 }}>
-                        <Ionicons name='paper-plane-outline' size={26} style={{ margin: 16 }} />
+                        <Icon name='paper-plane-outline' type='ionicon' size={26} style={{ margin: 16 }} />
                     </View>
 
                 </View>
