@@ -27,15 +27,15 @@ const InstagramHomeScreen = () => {
                 }}>
 
                     <View style={{ margin: 8 }}>
-                        <FontAwesome name="plus-square" size={26} color="black" />
+                        <FontAwesome name="plus-square-o" size={26} />
                     </View>
 
                     <View style={{ margin: 8 }}>
-                        <FontAwesome name="heart" size={26} color="red" style={{ marginLeft: 16 }} />
+                        <FontAwesome name="heart-o" size={26} style={{ marginLeft: 16 }} />
                     </View>
 
                     <View style={{ margin: 8 }}>
-                        <FontAwesome name="bookmark" size={26} color="blue" style={{ marginLeft: 16 }} />
+                        <FontAwesome name="paper-plane-o" size={26} style={{ marginLeft: 16 }} />
                     </View>
 
                 </View>
