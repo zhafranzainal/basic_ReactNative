@@ -26,7 +26,9 @@ const NoteListScreen = ({ navigation }) => {
     };
 
     useEffect(() => {
-        setData(realm.objects('Note'));
+        const notes = realm.objects('Note');
+        const notesByDate = notes.sorted('date', true);
+        setData(notesByDate);
     }, []);
 
     return (
