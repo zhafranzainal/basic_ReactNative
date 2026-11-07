@@ -11,6 +11,23 @@ const AddNoteScreen = () => {
 
     const [tempNote, setTempNote] = useState('');
 
+    const getCurrentDate = () => {
+
+        const months = [
+            "January", "February", "March", "April",
+            "May", "June", "July", "August",
+            "September", "October", "November", "December"
+        ];
+
+        const currentDate = new Date();
+        const dateOnly = currentDate.getDate();
+        const monthOnly = currentDate.getMonth();
+        const yearOnly = currentDate.getFullYear();
+
+        return months[monthOnly] + ' ' + dateOnly + ', ' + yearOnly;
+
+    };
+
     const saveNote = (newNote) => {
 
         const allData = realm.objects('Note');
@@ -58,7 +75,7 @@ const AddNoteScreen = () => {
 
             </View>
 
-            <Text style={styles.date}>Date</Text>
+            <Text style={styles.date}>{getCurrentDate()}</Text>
 
             <TextInput
                 multiline
