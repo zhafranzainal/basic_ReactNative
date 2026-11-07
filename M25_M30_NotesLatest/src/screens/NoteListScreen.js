@@ -70,6 +70,31 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: 'white'
     },
+    flatListContainer: {
+        padding: 8
+    },
+    mainDataContainer: {
+        margin: 8,
+        backgroundColor: 'whitesmoke',
+        borderRadius: 10,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between'
+    },
+    noteButton: {
+        padding: 8,
+        margin: 8
+    },
+    noteContainer: {
+        maxHeight: 40,
+        paddingBottom: 10
+    },
+    noteText: {
+        textAlign: 'left'
+    },
+    dateText: {
+        fontSize: 12
+    },
     headerContainer: {
         padding: 8,
         backgroundColor: 'moccasin',
