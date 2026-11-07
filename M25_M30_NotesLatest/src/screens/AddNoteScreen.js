@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
 
 import realm from '../../store/realm';
 import { Icon } from '@rneui/themed';
 
 const AddNoteScreen = () => {
+
+    const insets = useSafeAreaInsets();
 
     const [tempNote, setTempNote] = useState('');
 
@@ -40,13 +43,13 @@ const AddNoteScreen = () => {
     return (
         <View style={styles.mainContainer}>
 
-            <View style={styles.headerContainer}>
+            <View style={[styles.headerContainer, { paddingTop: insets.top }]}>
 
                 <Text style={styles.title}>Create</Text>
 
                 <TouchableOpacity style={styles.button}>
                     <Icon
-                        name="github"
+                        name="save"
                         type="font-awesome-5"
                         size={18}
                         onPress={() => saveNote(tempNote)}
