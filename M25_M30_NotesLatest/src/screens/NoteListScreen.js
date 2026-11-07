@@ -8,6 +8,23 @@ const NoteListScreen = ({ navigation }) => {
 
     const [data, setData] = useState([]);
 
+    const dateFormat = (date) => {
+
+        const months = [
+            "January", "February", "March", "April",
+            "May", "June", "July", "August",
+            "September", "October", "November", "December"
+        ];
+
+        const noteDate = new Date(date);
+        const dateOnly = noteDate.getDate();
+        const monthOnly = noteDate.getMonth();
+        const yearOnly = noteDate.getFullYear();
+
+        return months[monthOnly] + ' ' + dateOnly + ', ' + yearOnly;
+
+    };
+
     useEffect(() => {
         setData(realm.objects('Note'));
     }, []);
@@ -29,17 +46,18 @@ const NoteListScreen = ({ navigation }) => {
                 renderItem={({ item }) => {
                     return (
                         <View style={styles.mainDataContainer}>
-                            <TouchableOpacity
-                                style={styles.noteButton}
-                            >
+                            <TouchableOpacity style={styles.noteButton}>
+
                                 <View style={styles.noteContainer}>
                                     <Text style={styles.noteText}>
                                         {item.note}
                                     </Text>
                                 </View>
+
                                 <Text style={styles.dateText}>
-                                    {item.date}
+                                    {dateFormat(item.date)}
                                 </Text>
+
                             </TouchableOpacity>
                         </View>
                     )
