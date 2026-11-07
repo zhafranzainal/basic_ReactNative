@@ -32,7 +32,7 @@ const AddNoteScreen = () => {
             });
 
             alert('Successfully saved your note!');
-            console.log(allData);
+            console.log(allData.map(n => ({ id: n.id, note: n.note, date: n.date })));
 
         } else {
             alert('Empty note!');
