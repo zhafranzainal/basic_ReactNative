@@ -1,8 +1,16 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
 import { Icon } from '@rneui/themed';
 
+import realm from '../../store/realm';
+
 const NoteListScreen = ({ navigation }) => {
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        setData(realm.objects('Note'));
+    }, []);
 
     return (
         <View style={styles.mainContainer}>
@@ -12,6 +20,31 @@ const NoteListScreen = ({ navigation }) => {
                     Notes
                 </Text>
             </View>
+
+            <FlatList
+                contentContainerStyle={styles.flatListContainer}
+                data={data}
+                keyExtractor={(item) => item.id}
+                showsVerticalScrollIndicator={false}
+                renderItem={({ item }) => {
+                    return (
+                        <View style={styles.mainDataContainer}>
+                            <TouchableOpacity
+                                style={styles.noteButton}
+                            >
+                                <View style={styles.noteContainer}>
+                                    <Text style={styles.noteText}>
+                                        {item.note}
+                                    </Text>
+                                </View>
+                                <Text style={styles.dateText}>
+                                    {item.date}
+                                </Text>
+                            </TouchableOpacity>
+                        </View>
+                    )
+                }}
+            />
 
             <View style={styles.buttonContainer}>
                 <TouchableOpacity

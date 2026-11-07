@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
+import { Icon } from '@rneui/themed';
 
 import realm from '../../store/realm';
-import { Icon } from '@rneui/themed';
 
 const AddNoteScreen = () => {
 
